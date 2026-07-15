@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}All Tokens{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <h1>All Tokens</h1>
+
+    {% for token in tokens %}
+
+    <div class="dashboard-card">
+
+        <h2>Q{{ "%03d"|format(token["token_number"]) }}</h2>
+
+        <p>Email: {{ token["user_email"] }}</p>
+
+        <p>Status: {{ token["status"] }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

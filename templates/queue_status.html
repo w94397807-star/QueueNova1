@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Queue Status{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <h1>Current Queue</h1>
+
+    {% if current %}
+
+        <div class="dashboard-card">
+
+            <h2>Q{{ "%03d"|format(current["token_number"]) }}</h2>
+
+            <p>Status : {{ current["status"] }}</p>
+
+        </div>
+
+    {% else %}
+
+        <h2>No Token Called Yet</h2>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}My Tokens{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <h1>My Tokens</h1>
+
+    {% for token in tokens %}
+
+        <div class="dashboard-card">
+
+            <h2>Q{{ "%03d"|format(token["token_number"]) }}</h2>
+
+            <p>Status : {{ token["status"] }}</p>
+
+        </div>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

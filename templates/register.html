@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Register | QueueNova{% endblock %}
+
+{% block content %}
+
+<section class="login-section">
+
+    <div class="login-box">
+
+        <h2>Create Account</h2>
+
+        <form method="POST">
+
+            <input type="text" name="name" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Enter Email" required>
+
+            <input type="password" name="password" placeholder="Create Password" required>
+
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+            <button type="submit" class="login-btn2">
+                Register
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

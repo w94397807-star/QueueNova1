@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-card">
+    <h2>{{ total }}</h2>
+    <p>Total Tokens</p>
+</div>
+
+<div class="dashboard-card">
+    <h2>{{ waiting }}</h2>
+    <p>Waiting</p>
+</div>
+
+<div class="dashboard-card">
+    <h2>{{ called }}</h2>
+    <p>Called</p>
+</div>
+
+<div class="dashboard-card">
+    <h2>{{ completed }}</h2>
+    <p>Completed</p>
+</div>
+
+<section class="dashboard">
+
+    <h1>Admin Dashboard</h1>
+
+    <p>Manage QueueNova Tokens</p>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>📋</h2>
+            <p>All Tokens</p>
+
+            <a href="/all-tokens" class="dashboard-btn">
+                View Tokens
+            </a>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>⏭️</h2>
+            <p>Next Token</p>
+
+            <a href="/next-token" class="dashboard-btn">
+                Next
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<div class="dashboard-card">
+
+    <h2>✅</h2>
+
+    <p>Complete Token</p>
+
+    <a href="/complete-token" class="dashboard-btn">
+        Complete Token
+    </a>
+
+</div>
+<div class="dashboard-card">
+
+    <h2>📢</h2>
+
+    <p>Queue Status</p>
+
+    <a href="/queue-status" class="dashboard-btn">
+        View
+    </a>
+
+</div>
+<a href="/reset-queue" class="dashboard-btn">
+    Reset Queue
+</a>
+
+{% endblock %}

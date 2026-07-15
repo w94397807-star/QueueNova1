@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <h1>Welcome to QueueNova Dashboard</h1>
+
+    <p>Manage your queue quickly and easily.</p>
+
+    <div class="dashboard-cards">
+
+        <!-- Book Token -->
+        <div class="dashboard-card">
+            <h2>🎫</h2>
+            <p>Book Your Token</p>
+
+            <a href="/book-token" class="dashboard-btn">
+                Book Token
+            </a>
+        </div>
+
+        <!-- My Tokens -->
+        <div class="dashboard-card">
+            <h2>📋</h2>
+            <p>My Tokens</p>
+
+            <a href="/my-tokens" class="dashboard-btn">
+                View Tokens
+            </a>
+        </div>
+
+        <!-- Logout -->
+        <div class="dashboard-card">
+            <h2>🚪</h2>
+            <p>Logout</p>
+
+            <a href="/logout" class="dashboard-btn">
+                Logout
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<div class="dashboard-card">
+
+    <h2>📢</h2>
+
+    <p>Queue Status</p>
+
+    <a href="/queue-status" class="dashboard-btn">
+        View
+    </a>
+
+</div>
+
+{% endblock %}
